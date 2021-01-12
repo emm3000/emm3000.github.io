@@ -15,6 +15,11 @@ body {
   scroll-behavior: smooth;
 }
 
+span {
+  color: #030715;
+  font-size: 1.2em;
+}
+
 .contenedor {
   width: 90%;
   max-width: 1200px;
@@ -94,7 +99,7 @@ header {
 .subtitulo {
   text-align: center;
   font-weight: 300;
-  color: #9f8ad0;
+  color: #232db4;
   margin-bottom: 40px;
   font-size: 40px;
 }
@@ -107,11 +112,15 @@ header {
 }
 
 .contenedor-servicio img {
-  width: 40%;
+  width: 30%;
 }
 
 .checklist-servicio {
   width: 45%;
+}
+
+.checklist-servicio1 {
+  width: 60%;
 }
 
 .service {
@@ -120,12 +129,12 @@ header {
 
 .n-service {
   margin-bottom: 7px;
-  color: #9f8ad0;
+  color: #232db4;
 }
 
 .number {
   display: inline-block;
-  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+  background-image: linear-gradient(to top, #232db4 0%, #fbc2eb 100%);
   width: 30px;
   height: 30px;
   color: #fff;
@@ -234,6 +243,7 @@ footer {
 .footer-content {
   display: flex;
   justify-content: space-between;
+  height: 300px;
   align-items: center;
   flex-wrap: wrap;
   padding-top: 60px;
@@ -241,7 +251,6 @@ footer {
 }
 
 .contact-us {
-
   width: 40%;
   color: #fff;
 }
@@ -277,7 +286,7 @@ footer {
 
 .social-media-icon:hover {
   background: #fff;
-  color: #764ba2;
+  color: #232db4;
 }
 
 .social-media-icon i {
