@@ -1,0 +1,493 @@
+/* Geist, self-hosted (SIL Open Font License 1.1, see assets/fonts/OFL.txt) */
+@font-face {
+  font-family: "Geist";
+  src: url("assets/fonts/Geist-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist";
+  src: url("assets/fonts/Geist-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist";
+  src: url("assets/fonts/Geist-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light dark;
+
+  --color-bg: #ffffff;
+  --color-text: #3d4340;
+  --color-text-strong: #111312;
+  --color-text-muted: #646b67;
+  --color-border: #e5e8e6;
+  --color-accent: #0a6e45;
+
+  --font-family: "Geist", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-size-meta: 0.8125rem;
+  --font-size-body: 0.9375rem;
+  --font-size-lead: 1.0625rem;
+  --font-size-title: 1.625rem;
+  --font-size-title-wide: 1.75rem;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-line-height-body: 1.6;
+  --font-line-height-title: 1.25;
+  --font-tracking-title: -0.01em;
+
+  --space-3xs: 0.375rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 1.25rem;
+  --space-lg: 1.5rem;
+  --space-xl: 1.75rem;
+  --space-2xl: 2rem;
+  --space-3xl: 2.5rem;
+  --space-4xl: 3.5rem;
+  --space-5xl: 5rem;
+
+  --size-content: 55rem;
+  --size-contact-column: 18.75rem;
+  --size-section-label: 10rem;
+  --size-term: 5rem;
+  --size-term-wide: 5.5rem;
+  --size-value-line: 31.25rem;
+  --size-target: 44px;
+  --size-icon: 1rem;
+  --size-shot-width: 6rem;
+  --size-shot-height: 12rem;
+
+  --radius-shot: 0.75rem;
+
+  --border-width: 1px;
+  --focus-width: 2px;
+  --focus-offset: 2px;
+  --icon-stroke: 1.75;
+  --motion-duration: 150ms;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0f1211;
+    --color-text: #c1c8c4;
+    --color-text-strong: #eef1ef;
+    --color-text-muted: #8d9691;
+    --color-border: #242a27;
+    --color-accent: #5ed49a;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding-inline: var(--space-md);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-family);
+  font-size: var(--font-size-body);
+  line-height: var(--font-line-height-body);
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+p,
+dl,
+dd,
+ol {
+  margin: 0;
+}
+
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: var(--color-text-strong);
+  text-decoration: none;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: var(--focus-width) solid var(--color-accent);
+  outline-offset: var(--focus-offset);
+}
+
+.icon {
+  flex: none;
+  width: var(--size-icon);
+  height: var(--size-icon);
+  fill: none;
+  stroke: var(--color-accent);
+  stroke-width: var(--icon-stroke);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.page {
+  max-width: var(--size-content);
+  margin-inline: auto;
+  padding-block: var(--space-2xl);
+}
+
+/* Header */
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding-block-end: var(--space-2xl);
+}
+
+.intro__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.intro__name,
+.intro__role {
+  font-size: var(--font-size-title);
+  line-height: var(--font-line-height-title);
+  letter-spacing: var(--font-tracking-title);
+}
+
+.intro__name {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-strong);
+}
+
+.intro__role {
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-muted);
+}
+
+.intro__value {
+  max-width: var(--size-value-line);
+  font-size: var(--font-size-lead);
+}
+
+.intro__place {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  color: var(--color-text-strong);
+  font-weight: var(--font-weight-medium);
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  border-block-end: var(--border-width) solid var(--color-border);
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  min-height: var(--size-target);
+  border-block-start: var(--border-width) solid var(--color-border);
+  font-weight: var(--font-weight-medium);
+}
+
+.contact-row__label {
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-regular);
+}
+
+.contact-row__value {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3xs);
+}
+
+/* Sections */
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding-block: var(--space-2xl);
+  border-block-start: var(--border-width) solid var(--color-border);
+}
+
+.section:last-child {
+  padding-block-end: 0;
+}
+
+.section__title {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-strong);
+}
+
+.link {
+  display: inline-flex;
+  white-space: nowrap;
+  align-items: center;
+  gap: var(--space-3xs);
+  min-height: var(--size-target);
+  font-weight: var(--font-weight-medium);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: var(--space-lg);
+}
+
+/* Cases */
+
+.cases {
+  display: flex;
+  flex-direction: column;
+}
+
+.case {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding-block: var(--space-xl);
+  border-block-start: var(--border-width) solid var(--color-border);
+}
+
+.case:first-child {
+  padding-block-start: 0;
+  border-block-start: 0;
+}
+
+.case:last-child {
+  padding-block-end: 0;
+}
+
+.case__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.case__title {
+  font-size: var(--font-size-lead);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-strong);
+}
+
+.case__meta {
+  font-size: var(--font-size-meta);
+  color: var(--color-text-muted);
+}
+
+.case__meta--status {
+  color: var(--color-accent);
+  font-weight: var(--font-weight-medium);
+}
+
+.case__facts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.facts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xs);
+}
+
+.fact {
+  display: grid;
+  grid-template-columns: var(--size-term) minmax(0, 1fr);
+  column-gap: var(--space-xs);
+}
+
+.fact dt {
+  color: var(--color-text-muted);
+}
+
+.fact--links dt {
+  padding-block-start: calc((var(--size-target) - 1em * var(--font-line-height-body)) / 2);
+}
+
+.fact__result {
+  color: var(--color-text-strong);
+  font-weight: var(--font-weight-medium);
+}
+
+.case__shot {
+  display: block;
+  width: var(--size-shot-width);
+  height: var(--size-shot-height);
+  border-radius: var(--radius-shot);
+  border: var(--border-width) solid var(--color-border);
+  object-fit: cover;
+}
+
+/* Experience */
+
+.jobs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.job {
+  display: flex;
+  flex-direction: column;
+}
+
+.job__org {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-strong);
+}
+
+.job__client,
+.job__dates {
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-regular);
+}
+
+.job__dates {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Stack */
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.skills dt {
+  color: var(--color-text-muted);
+}
+
+/* Contact */
+
+.contact__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+
+.contact__lead {
+  font-size: var(--font-size-lead);
+  color: var(--color-text-strong);
+}
+
+.contact .links {
+  column-gap: var(--space-xl);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a {
+    transition: color var(--motion-duration) ease-out;
+  }
+}
+
+/* Wide layout: custom properties cannot be used in media conditions,
+   so 47.5rem (760px) is the one breakpoint. */
+@media (min-width: 47.5rem) {
+  body {
+    padding-inline: var(--space-2xl);
+  }
+
+  .page {
+    padding-block: var(--space-5xl);
+  }
+
+  .intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) var(--size-contact-column);
+    gap: var(--space-4xl);
+    align-items: end;
+    padding-block-end: var(--space-4xl);
+  }
+
+  .intro__name,
+  .intro__role {
+    font-size: var(--font-size-title-wide);
+  }
+
+  .section {
+    display: grid;
+    grid-template-columns: var(--size-section-label) minmax(0, 1fr);
+    gap: 0;
+    padding-block: var(--space-3xl);
+  }
+
+  .case--shot {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) var(--size-shot-width);
+    gap: var(--space-2xl);
+  }
+
+  .case__head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    column-gap: var(--space-sm);
+  }
+
+  .case__facts {
+    gap: var(--space-3xs);
+  }
+
+  .fact {
+    grid-template-columns: var(--size-term-wide) minmax(0, 1fr);
+    column-gap: var(--space-sm);
+  }
+
+  .job {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: var(--space-lg);
+  }
+
+  .job__summary {
+    grid-column: 1;
+  }
+
+  .skills {
+    gap: var(--space-xs);
+  }
+
+  .skills > div {
+    display: grid;
+    grid-template-columns: var(--size-section-label) minmax(0, 1fr);
+    column-gap: var(--space-sm);
+  }
+
+}
