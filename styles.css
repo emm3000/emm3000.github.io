@@ -45,6 +45,7 @@
   --font-line-height-body: 1.6;
   --font-line-height-title: 1.25;
   --font-tracking-title: -0.01em;
+  --font-underline-offset: 0.2em;
 
   --space-3xs: 0.375rem;
   --space-2xs: 0.5rem;
@@ -129,7 +130,7 @@ ol {
 a {
   color: var(--color-text-strong);
   text-decoration: none;
-  text-underline-offset: 0.2em;
+  text-underline-offset: var(--font-underline-offset);
 }
 
 a:hover {
