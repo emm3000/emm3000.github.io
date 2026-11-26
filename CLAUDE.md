@@ -11,7 +11,7 @@ Static HTML and CSS served as-is: `index.html`, `styles.css`, `assets/`. GitHub 
 - Page copy is neutral LATAM Spanish. Code, file names, commits and this file are English.
 - Sections, in order: header, projects, experience, stack, contact.
 - Each project is a case: problem, own role, stack, measurable result, proof (screenshot, repo, store link). Three or four cases; an empty section is cut, never filled.
-- Client work (the 2FA SDK and the Jetpack Compose migration for the bank client at Encora) is told at the level the contract allows: problem, role, impact. Code, internal names and screenshots of client apps stay out.
+- Client work (the 2FA SDK and the Jetpack Compose migration for Scotiabank, via Encora) is told at the level the contract allows: problem, role, impact. The client names Scotiabank and Movistar may appear, as they do in the CV. Code, internal names and screenshots of client apps stay out.
 - JustChill (`emm3000/Just-Chill`, `emm3000/justchill-ios`) is in closed testing on Google Play: label it "En pruebas cerradas en Google Play", link both repos, show phone screenshots. It gets the store badge once it reaches production.
 - Every claim matches the owner's CV. `CLAUDE.local.md` holds its path; a claim the CV lacks is a question for the owner.
 
