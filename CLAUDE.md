@@ -18,7 +18,8 @@ Static HTML and CSS served as-is: `index.html`, `styles.css`, `assets/`. GitHub 
 ## Design
 
 - Every visual value is a token: CSS custom properties in `:root` (`--color-*`, `--space-*`, `--radius-*`, `--font-*`), dark values under `@media (prefers-color-scheme: dark)`. Rules reference tokens; a new value becomes a new token first.
-- One typeface, one accent color, generous whitespace.
+- The page borrows the visual language of the owner's app JustChill: pure black, large monospaced numerals, pill and segmented controls, uppercase micro-labels.
+- One type superfamily (IBM Plex Sans for text, IBM Plex Mono for numerals and labels), one accent color (ochre), generous whitespace. JustChill's category-dot colors may appear next to the accent.
 - Accessibility floor, in both themes:
   - Contrast at least 4.5:1 for text, 3:1 for large text and control borders.
   - Interactive targets at least 44×44 CSS px.
@@ -29,7 +30,7 @@ Static HTML and CSS served as-is: `index.html`, `styles.css`, `assets/`. GitHub 
 
 ## Layout changes
 
-Load `mattpocock-skills:prototype` before a new layout or a section redesign: two or three throwaway variants, the owner picks one, the rest are deleted. `mattpocock-skills:grilling` stress-tests the copy of a case when the owner asks for it.
+Load `mattpocock-skills:prototype` before a new layout or a section redesign: two or three throwaway variants, the owner picks one. The rest stay out of the repo; the owner keeps them outside it in case of a pivot. `mattpocock-skills:grilling` stress-tests the copy of a case when the owner asks for it.
 
 ## Verification
 
